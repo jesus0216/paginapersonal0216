@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Pagina</title>
+</head>
+<body>
+    <div>
+        <center><h1 class='titulo'> GEARS OF WAR</h1>
+            <h2 class='titulo'> Ver imagenes</h2>
+        </center>
+    </div>
+
+
+
+<!--CSS-->
+<style>
+.titulo { font-size: 45px; text-shadow: 20px 15px 7px rgba(241, 0, 0, 0.5);}
+</style>
+    
+
+<div>
+    
+    <center><button  onclick="regresarImagen()">cambiar imagen</button></center>
+
+    <center><img id="imagenes" src="imagenes/imagen2.jpg" alt="gow" width="550px"></center>
+
+</div>
+<script>
+    
+    var imagenes = [
+    "imagenes/imagen2.jpg",
+    "imagenes/imagen3.jpeg",
+    "imagenes/imagen4.jpg",
+    "imagenes/imagen5.jpeg",
+    "imagenes/imagen6.jpg",
+    "imagenes/maxresdefault.jpg"
+    ];
+
+    var indiceActual = 0;
+
+    function cambiarImagen() {
+    indiceActual = (indiceActual + 1) % imagenes.length;
+    cambiarImagen(indiceActual);
+    }
+
+    function regresarImagen() {
+    indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+    cambiarImagen(indiceActual);
+    }
+
+    function cambiarImagen(indice) {
+    var imagen = document.getElementById("imagenes");
+    imagen.src = imagenes[indice];
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</script>
+        
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
